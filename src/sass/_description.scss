@@ -1,0 +1,47 @@
+
+.description {
+		background-image: linear-gradient(to bottom, #000, var(--primery-background-color));
+
+		&__container {
+			@media screen and (min-width: $desktop){
+					padding-top: 55px;
+			}
+		}
+
+		&__icon {
+			margin-left: 60px;
+			margin-bottom: 20px;
+			width: 60px;
+			height: 50px;
+
+				@media screen and (min-width: $tablet) {
+				margin-left: 70px;
+				margin-bottom: 25px;
+				width: 70px;
+				height: 57px;
+				}
+
+				@media screen and (min-width: $desktop){
+				margin-left: 85px;
+				margin-bottom: 30px;
+				width: 80px;
+				height: 64px;
+				}
+
+		}
+
+		&__text {
+			font-size: 20px;
+			font-weight: 700;
+			text-align: center;
+
+				@media screen and (min-width: $tablet){
+					font-size: 23px;
+				}
+
+				@media screen and (min-width: $desktop){
+					font-size: 27px;
+				}
+		}
+}
+

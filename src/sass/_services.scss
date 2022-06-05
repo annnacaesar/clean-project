@@ -1,0 +1,65 @@
+
+.services {
+	background-image: linear-gradient(to bottom, var(--primery-background-color), #2d2d2d);
+		&__container {
+			padding-left: 35px;
+		}
+
+		&__list {
+			margin: -15px;
+			
+			@media screen and (min-width: $tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			}
+		}
+
+		&__item {
+			margin: 15px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+
+				@media screen and (min-width: $tablet) {
+				flex-basis: calc(100% / 2 - 30px);
+				}
+
+				@media screen and (min-width: $desktop) {
+					flex-basis: calc(100% / 3 - 30px);
+				}
+		}
+
+		&__image-container {
+			border: 1px solid var(--hover-color);
+		}
+
+		&__image {
+			position: relative;
+			right: 5%;
+			width: 100%;
+
+			@media screen and (max-width: 399px){
+				top: 15px;
+			}
+			@media screen and (min-width: 400px){
+				top: 20px;
+			}
+			@media screen and (min-width: $tablet){
+				top: 8%;
+			}
+		}
+
+		&__title {
+			margin-top: 35px;
+			font-family: 'EB Garamond', serif;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 120%;
+			@media screen and (min-width: $tablet){
+				font-size: 22px;
+			}
+			@media screen and (min-width: $tablet){
+				font-size: 25px;
+			}
+		}
+}

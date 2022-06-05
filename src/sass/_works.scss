@@ -1,0 +1,66 @@
+
+.works {
+background-image: linear-gradient(to bottom, #2d2d2d, var(--primery-background-color));
+
+		&__title {
+			text-align: center;
+			margin-bottom: 50px;
+			font-family: 'EB Garamond', serif;
+			font-size: 40px;
+
+			@media screen and (min-width: $tablet) {
+				margin-bottom: 65px;
+				font-size: 44px;
+			}
+
+			@media screen and (min-width: $tablet){
+				margin-bottom: 80px;
+				font-style: 48px;
+			}
+		}
+
+		// &__btn-list {
+		// 	// gap: 30px;
+		// 	display: flex;
+		// 	justify-content: center;
+		// 	align-items: center;
+		// 	flex-wrap: wrap;
+		// }
+
+		// &__btn {
+		// 	max-width: 200px;
+		// 	display: inline-block;
+		// 	margin: 0;
+		// 	padding: 0;
+		// 	border: none;
+		// 	background-color: transparent
+		// }
+
+		&__list {
+			margin: -15px;
+			
+			@media screen and (min-width: $tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			}
+		}
+
+		&__item {
+			margin: 15px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+
+				@media screen and (min-width: $tablet) {
+				flex-basis: calc(100% / 2 - 30px);
+				}
+
+				@media screen and (min-width: $desktop) {
+					flex-basis: calc(100% / 3 - 30px);
+				}
+		}
+
+		&__image {
+			width: 100%;
+		}
+}
