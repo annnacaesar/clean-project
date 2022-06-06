@@ -2,20 +2,20 @@
   "name": "clean-project",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://annnacaesar.github.io/cleanProject",
+  "homepage": "https://annnacaesar.github.io/clean-project",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /cleanProject/"
+    "build": "parcel build src/*.html --public-url /clean-project/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/annnacaesar/cleanProject.git"
+    "url": "git+https://github.com/annnacaesar/clean-project.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/annnacaesar/cleanProject/issues"
+    "url": "https://github.com/annnacaesar/clean-project/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
