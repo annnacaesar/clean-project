@@ -190,26 +190,27 @@ bottom: 9px;
 // //-------------Hero---------------------------
 
 .hero {
-	padding-top: 110px;
+	// padding-top: 110px;
 	background-color: #000;
 
 	&__container {
-		padding-top: 70px;
-		gap: 85px;
+		padding-top: 250px;
+		gap: 140px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		background-image: url(../images/back.jpg);
+		background-image: url(../images/back-mobile-full.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position-x: right;
+		background-position-x: center;
 
 
 		@media screen and (min-width: $tablet) and (max-width: 1199px) {
-			padding-top: 150px;
+			padding-top: 250px;
 		
 			gap: 150px;
+			background-image: url(../images/back-tablet.jpg);
 			background-size: 798px;
 			background-position-x: center;
 		}
@@ -218,6 +219,7 @@ bottom: 9px;
 			padding-top: 246px;
 			padding-bottom: 70px;
 			gap: 250px;
+			background-image: url(../images/back.jpg);
 			background-size: 1230px;
 		}
 	}
