@@ -239,6 +239,7 @@ bottom: 9px;
 			}
 		
 			@media screen and (min-width: $desktop) {
+				min-width: 800px;
 				font-size: 72px;
 			}
 	}
