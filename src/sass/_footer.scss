@@ -1,0 +1,74 @@
+
+// .footer__icon {
+// 	margin-bottom: 20px;
+// 	fill: #fff;
+// }
+
+
+.footer__content{
+	@media screen and (min-width: $tablet) {
+			display: flex;
+		justify-content: space-between;
+	}
+}
+
+.footer__contacts-list {
+	@media screen and (max-width: 767px) {
+	margin-bottom: 25px;
+}
+
+@media screen and (min-width: $tablet) {
+	max-width: 250px;
+}
+
+@media screen and (min-width: $desktop) {
+	max-width: 300px;
+}
+}
+
+.footer__hour-list {	
+	@media screen and (max-width: 767px) {
+	margin-bottom: 25px;
+}
+}
+.footer__title{
+font-family: 'EB Garamond', serif;
+text-decoration: underline;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 15px;
+		font-size: 16px;
+}
+
+@media screen and (min-width: $tablet) {
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+@media screen and (min-width: $desktop) {
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+	
+}
+
+.footer__contacts-item:not(:last-child),
+.footer__hour-item:not(:last-child){
+margin-bottom: 15px;
+}
+
+.footer__icon-smartphone {
+	fill: #fff;
+}
+
+.footer__network-list {
+	display: flex;
+	
+	@media screen and (min-width: $tablet) {
+	justify-content: space-evenly;
+}
+}
+.footer__network-item{
+	@media screen and (max-width: 767px) {
+		margin-left: 20px;
+}
+}
