@@ -1,0 +1,293 @@
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.2);
+	opacity: 1;
+
+	@media screen and (max-width: 767px) {
+		padding: 93px 15px;
+		overflow-y: scroll;
+	}
+
+	transition: opacity var(--transition-duration) var(--timing-function),
+		visibility var(--transition-duration) var(--timing-function);
+
+	&--is-hidden {
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+.modal__btn-close {
+display: block;
+width: 30px;
+height: 20px;
+z-index: 3;
+position: absolute;
+top: 12px;
+right: 8px;
+
+	transition: var(--transition);
+
+&:hover::before,
+&:focus::before {
+	background-color: var(--accent-color);
+}
+}
+
+.modal__btn-close::before,
+.modal__btn-close::after{
+	content: '';
+	background-color: rgb(5, 5, 5);
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	transition: var(--transition);
+}
+
+.modal__btn-close::before{
+transform: rotate(45deg);
+top: 9px;
+}
+
+.modal__btn-close::after{
+transform: rotate(-45deg);
+bottom: 9px;
+}
+
+.modal {
+	background-color: #fff;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	z-index: 10;
+	position: relative;
+	width: 100%;
+	opacity: 1;
+
+	@media screen and (min-width: $tablet) {
+		position: absolute;
+		width: 450px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(1);
+		transition: transform 500ms cubic-bezier(0.17, 0.67, 0.83, 0.67), opacity 500ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 528px;
+	}
+
+	.backdrop--is-hidden & {
+		transform: translate(-50%, -50%) scale(0.5) translateY(-700px);
+		opacity: 0;
+	}
+
+	&__form {
+		width: 100%;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 40px;
+	}
+
+	&__title {
+		margin-bottom: 12px;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 23px;
+		text-align: center;
+
+		color: #212121;
+	}
+
+	&__field {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 10px;
+
+		font-size: 12px;
+		line-height: 1.16;
+		letter-spacing: 0.01em;
+		color: #757575;
+	}
+
+	&__feedback {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		font-size: 12px;
+		line-height: 1.16;
+		letter-spacing: 0.01em;
+		color: #757575;
+		margin-bottom: 20px;
+	}
+}
+
+.modal__icon {
+	position: absolute;
+	bottom: 11px;
+	left: 12px;
+
+	transition: fill var(--transition-duration) var(--timing-function);
+
+	.modal__input:focus + & {
+		fill: var(--accent-color);
+	}
+}
+
+.modal__input {
+	margin-top: 4px;
+	padding: 11px 42px;
+
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	box-sizing: border-box;
+	border-radius: 4px;
+
+	transition: border-color var(--transition-duration) var(--timing-function),
+		outline var(--transition-duration) var(--timing-function), fill var(--transition-duration) var(--timing-function);
+
+	&:focus {
+		border-color: var(--accent-color);
+		outline: var(--accent-color);
+	}
+}
+
+.modal__textarea {
+	resize: none;
+	margin-top: 4px;
+	padding: 12px 16px;
+	width: 100%;
+	height: 120px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	box-sizing: border-box;
+	border-radius: 4px;
+
+	&:focus {
+		border-color: var(--accent-color);
+		outline: var(--accent-color);
+	}
+
+	&::placeholder {
+		font-size: 14px;
+		line-height: 1.14;
+		letter-spacing: 0.01em;
+
+		color: rgba(117, 117, 117, 0.5);
+	}
+}
+
+/* ====================КАСТОМНИЙ ЧЕКБОКС==================== */
+
+// .checkbox {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	padding-left: 33px;
+// 	margin-bottom: 30px;
+// 	font-size: 10px;
+// 	line-height: 1.16;
+
+// 	@media screen and (min-width: $tablet) {
+// 		font-size: 12px;
+// 	}
+
+// 	color: #757575;
+
+// 	&__label {
+// 		cursor: pointer;
+// 	}
+
+// 	&__thumb {
+// 		position: relative;
+// 	}
+
+// 	&__policy {
+// 		text-decoration: underline;
+
+// 		line-height: 1.7;
+// 		font-size: 12px;
+
+// 		color: var(--accent-color);
+
+// 		@media screen and (min-width: $tablet) {
+// 			font-size: 14px;
+// 		}
+// 	}
+// }
+
+// .checkbox__icon-vector {
+// 	position: absolute;
+// 	top: 50%;
+// 	left: -22px;
+// 	transform: translateY(-50%);
+// 	display: inline-block;
+// 	width: 16px;
+// 	height: 15px;
+
+// 	transition: fill var(--transition-duration) var(--timing-function),
+// 		background-color var(--transition-duration) var(--timing-function),
+// 		border-radius var(--transition-duration) var(--timing-function);
+
+// 	.checkbox__input:checked + & {
+// 		fill: var(--accent-color);
+// 		background-color: var(--accent-color);
+// 		border-radius: 2px;
+// 	}
+
+// 	.checkbox__input:focus + & {
+// 		fill: var(--accent-color);
+// 	}
+// }
+
+// .checkbox__icon {
+// 	position: absolute;
+// 	top: 2px;
+// 	right: 8px;
+
+// 	width: 12px;
+// 	height: 10px;
+// 	fill: #ffffff;
+// 	opacity: 0;
+
+// 	transition: opacity var(--transition-duration) var(--timing-function);
+
+// 	.checkbox__input:checked ~ & {
+// 		opacity: 1;
+// 	}
+// }
+
+/* -----------------------кінець кастомного чекбоксу--------------- */
+
+.modal__button{
+	margin: 0 auto;
+	padding: 5px 10px;
+		display: flex;
+		background-color: inherit;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-style: normal;
+		font-size: 16px;
+		line-height: 140%;
+		color: var(--hover-color);
+		border: 1px solid var(--hover-color);
+		border-radius: 60px;
+
+			@media screen and (min-width: $tablet) {
+				padding: 15px 20px;
+				font-size: 19px;
+			}
+
+			@media screen and (min-width: $desktop ) {
+				padding: 20px 30px;
+				font-size: 21px;
+			}
+}
+
